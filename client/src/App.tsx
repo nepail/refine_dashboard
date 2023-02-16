@@ -34,7 +34,8 @@ import {
   PropertyDetails, 
   CreateProperty,
   AgentProfile,
-  EditProperty
+  EditProperty,
+  AllProperties
 } from "pages";
 import { CredentialResponse } from "interfaces/google";
 import { parseJwt } from "utils/parse-jwt";
@@ -126,22 +127,26 @@ function App() {
           resources={[
             {
               name: "property",
-              list: MuiInferencer,
+              list: AllProperties,
+              show: PropertyDetails,
+              create: CreateProperty,
+              edit: EditProperty,
               icon: <VillaOutlined />
             },
             {
               name: "agent",
-              list: MuiInferencer,
+              list: Agents,
+              show: AgentProfile,
               icon: <PeopleAltOutlined />
             },
             {
               name: "review",
-              list: MuiInferencer,
+              list: Home,
               icon: <StarOutlineRounded />
             },
             {
               name: "message",
-              list: MuiInferencer,
+              list: Home,
               icon: <ChatBubbleOutline />
             },
             {
@@ -149,7 +154,7 @@ function App() {
               options: {
                 label: 'My Profile'
               },
-              list: MuiInferencer,
+              list: MyProfile,
               icon: <AccountCircleOutlined />
             },
           ]}
