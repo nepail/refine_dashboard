@@ -1,12 +1,13 @@
-import {Button} from '@pankod/refine-mui'
-import {CustomButtonProps} from 'interfaces/common'
+import { Button } from '@pankod/refine-mui'
+import { CustomButtonProps } from 'interfaces/common'
 
 
-const CustomButton = ({type, title, backgroundColor, color, fullWidth, icon, handleClick}: CustomButtonProps) => {
+const CustomButton = ({ type, title, backgroundColor, color, fullWidth, icon, handleClick }: CustomButtonProps) => {
   return (
     <Button
+      type={type === 'submit' ? 'submit' : 'button'}
       sx={{
-        flex: fullWidth ? 1:'unset',
+        flex: fullWidth ? 1 : 'unset',
         padding: '10px 15px',
         width: fullWidth ? '100%' : 'fit-content',
         minWidth: 130,
