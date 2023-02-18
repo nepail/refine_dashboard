@@ -37,7 +37,8 @@ const CreateProperty = () => {
       register={register}
       onFinish={onFinish}
       formLoading={formLoading}
-      handleSubmit={handleImageChange}
+      handleSubmit={handleSubmit}
+      handleImageChange={handleImageChange}
       onFinishHandler={onFinishHandler}
       propertyImage={propertyImage}
     />
